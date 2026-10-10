@@ -8,6 +8,9 @@ concurrency:
   group: ${{github.workflow}}-${{github.ref}}
   cancel-in-progress: true
 
+permissions:
+  contents: write
+
 jobs:
   get_version:
     name: Get the current version
